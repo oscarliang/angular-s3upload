@@ -1,15 +1,15 @@
 {
-  "name": "AMP",
+  "name": "oscar",
   "version": "1.0.0",
-  "description": "AMP code test for FED",
+  "description": "Code test",
   "scripts": {
-    "test": "karma start "
+    "test": "grunt test"
   },
   "repository": {
     "type": "git",
     "url": "https://AMPFeds@bitbucket.org/AMPFeds/amp-code-test.git"
   },
-  "author": "AMP",
+  "author": "oscar",
   "license": "MIT",
   "devDependencies": {
     "grunt": "^1.0.1",
@@ -48,7 +48,7 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "scripts": {
-    "test": "grunt test"
+  "dependencies": {
+    "serve-static": "^1.12.1"
   }
 }

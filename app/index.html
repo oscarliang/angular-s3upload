@@ -9,7 +9,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="shortcut icon" href="{{PROJECT_URL}}/images/{{PROJECT}}/favicon.ico" type="image/icon"> 
+    <link rel="shortcut icon" href="./favicon.ico" type="image/icon">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -23,8 +23,8 @@
     <link rel="stylesheet" href="styles/app.css">
     <!-- endbuild -->
     <link rel="stylesheet" href="styles/print.css" media="print">
-    
-    <!--<script src="https://code.highcharts.com/adapters/standalone-framework.js"></script>-->  
+
+    <!--<script src="https://code.highcharts.com/adapters/standalone-framework.js"></script>-->
 
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -46,7 +46,7 @@
     <script src="libs/angular-placeholder.js"></script>
     <script src="libs/jstz.min.js"></script>-->
     <!-- endbuild -->
-   
+
   </head>
   <body>
     <div id="grid-content" ui-view></div>
@@ -54,9 +54,7 @@
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <!-- APP CONFIG    -->
-    <script src="data/data.js"></script>
-    
-  
+
     <script src="app/globals.js"></script>
     <script src="app/app.js"></script>
     <script src="app/filters.js"></script>
@@ -71,18 +69,18 @@
 
     <!-- CONTROLLERS & MODELS    -->
 
-    
+
     <script src="dashboard/overview/dashboard-overview-controller.js"></script>
-    <script src="dashboard/overview/dashboard-overview-model-service.js"></script> 
+    <script src="dashboard/overview/dashboard-overview-model-service.js"></script>
     <script src="dashboard/upload/file-upload-controller.js"></script>
 
 
     <script src="views/mobile.js"></script>
     <script src="other/login/login.js"></script>
-   
+
     <!-- DIRECTIVES    -->
     <script src="components/ui/form/search-textfield-directive.js"></script>
-    
+
     <!-- API    -->
     <script src="components/utilities/api/api-config.js"></script>
     <script src="components/utilities/api/api-http-service.js"></script>
