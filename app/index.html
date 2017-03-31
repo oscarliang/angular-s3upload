@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html id="ng-app" ng-app="oscarUI">
+  <head>
+    <title>{{PROJECTSUBJECT}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="{{PROJECT_URL}}/images/{{PROJECT}}/favicon.ico" type="image/icon"> 
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-motion/dist/angular-motion.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,700,300,600,400' rel='stylesheet' type='text/css'>
+
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/app.css">
+    <!-- endbuild -->
+    <link rel="stylesheet" href="styles/print.css" media="print">
+    
+    <!--<script src="https://code.highcharts.com/adapters/standalone-framework.js"></script>-->  
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js  -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <!-- endbower -->
+    <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/external.js -->
+    <script src="libs/ui-bootstrap-tpls.js"></script>
+<!--    <script src="libs/angular-strap.js"></script>
+
+    <script src="libs/angular-placeholder.js"></script>
+    <script src="libs/jstz.min.js"></script>-->
+    <!-- endbuild -->
+   
+  </head>
+  <body>
+    <div id="grid-content" ui-view></div>
+    <!--<ng-toast></ng-toast>-->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <!-- APP CONFIG    -->
+    <script src="data/data.js"></script>
+    
+  
+    <script src="app/globals.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/filters.js"></script>
+    <script src="app/routes.js"></script>
+
+
+    <!-- SERVICES    -->
+    <script src="components/utilities/preload-service.js"></script>
+    <script src="components/user/user-service.js"></script>
+    <script src="components/utilities/time-service.js"></script>
+    <script src="components/utilities/string-service.js"></script>
+
+    <!-- CONTROLLERS & MODELS    -->
+
+    
+    <script src="dashboard/overview/dashboard-overview-controller.js"></script>
+    <script src="dashboard/overview/dashboard-overview-model-service.js"></script> 
+    <script src="dashboard/upload/file-upload-controller.js"></script>
+
+
+    <script src="views/mobile.js"></script>
+    <script src="other/login/login.js"></script>
+   
+    <!-- DIRECTIVES    -->
+    <script src="components/ui/form/search-textfield-directive.js"></script>
+    
+    <!-- API    -->
+    <script src="components/utilities/api/api-config.js"></script>
+    <script src="components/utilities/api/api-http-service.js"></script>
+    <script src="components/utilities/api/api-file-service.js"></script>
+    <script src="components/utilities/api/api-user-service.js"></script>
+
+
+    <!-- endbuild -->
+
+  </body>
+</html>

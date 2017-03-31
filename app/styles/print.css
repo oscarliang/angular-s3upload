@@ -1,0 +1,39 @@
+html,
+body {
+  background-color: #ffffff;
+  overflow-y: visible!important;
+}
+html .content-wrapper,
+body .content-wrapper {
+  border: none;
+}
+html nav,
+body nav,
+html .subnav,
+body .subnav,
+html .page-actions,
+body .page-actions {
+  display: none;
+}
+html .fullcontent,
+body .fullcontent {
+  width: 100%!important;
+  border-left: none;
+}
+html #TabOverview #Figures .figure,
+body #TabOverview #Figures .figure {
+  background-color: transparent!important;
+  border: 1px solid transparent!important;
+}
+html #TabOverview #Figures .figure span.middle,
+body #TabOverview #Figures .figure span.middle {
+  line-height: 0!important;
+}
+.col-sm-4 {
+  width: auto!important;
+  display: inline-block;
+}
+breakdown-pie .chart {
+  background-color: transparent!important;
+  border: 1px solid transparent!important;
+}

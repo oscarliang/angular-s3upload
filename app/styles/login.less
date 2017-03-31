@@ -1,0 +1,187 @@
+/* Background/highlight colours */
+@gaPrimaryBlue:#1d8f99;
+@gaPrimaryBlueDark:#197F88;
+@gaSecondaryOrange:#d04005;
+@gaGray: #363535;
+@gaBlueHighlight: #7dc3cb;
+@gaLightGray:#f5f5f5;
+@gaWhite: #fdfdfd;
+@gaBorderGray: #E0E0E0;
+@cvGreen: #00a751;
+@cvMidBlue: #1b87cd;
+@cvWPBlue: #025975; 
+@cvDarkBlue: #016b99;
+@cvGrey: #f1f1f1;
+@cvLightGrey: #fafafa;
+/* Text colours */
+@gaLightGrayText: #727272;
+/* Sizes */
+@maxWidth: 1024px;
+/* Colour pallete colours */
+@blue: #025975;
+@blueMedium: #018999;
+@orange: #e67100;
+@purpleMedium: #734e8c;
+@red:#c4410d;
+
+.fullheight {
+    background-color:transparent;
+    border:none;
+}
+.loginlink(){
+    text-align: center;
+    cursor: pointer;
+    min-width: 140px;
+    font-size:14px;
+    margin-top: 10px;
+    &:hover {
+        color:@gaSecondaryOrange;
+    }
+}
+
+.box(){
+    height:100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.boxcontainer(){
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    /* IE9 fix */
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #ffffff;
+}
+.gridboxbanner(){
+    background-image: url(styles/images/grid-logo-positive.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 250px;
+    height: 65px;
+    border: none;
+}
+.cpboxbanner(){
+    background-image: url(styles/images/cp-logo-positive.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 250px;
+    height: 65px;
+    border: none;
+}
+#message{
+    .box();
+    .message-container{
+        .boxcontainer();
+        padding: 1em 1em 1em 1em;
+        border: 1px solid #F1F1F1;
+        .msgtitle{
+            margin-bottom: 25px;
+        }
+        .msgnote{
+            margin-bottom: 25px;
+            font-size: 13px;
+        }
+    }
+}
+
+#Login{
+    .box();
+    .login-container {
+        .boxcontainer();
+        padding:3em;
+        border: 1px solid #F1F1F1;
+        position: relative;
+        top: -20px;
+    }
+    .banner
+    {
+        .gridboxbanner();
+    }
+    .cpbanner{
+        .cpboxbanner();
+    }
+
+    input {
+        border-radius: 1px;
+        border: none;
+        box-shadow: none;
+        background-color: #F7F7F7;
+    }
+
+    button {
+        border-radius: 2px;
+        padding: .5em;
+        font-size: 20px;
+    }
+
+    .form-group:last-child
+        {
+        margin-bottom:0px;
+    }
+
+    .error-message {
+        color: @orange;
+        width: 100%;
+        text-align: center;
+    }
+    .register-link{
+        border-right: 1px solid;
+        .loginlink();
+    } 
+
+    .getpin-link{
+        .loginlink();
+    }
+
+}
+
+/*
+    Legacy Firefox implementation treats all flex containers
+    as inline-block elements.
+*/
+
+@-moz-document url-prefix() {
+    #Login {
+        width: 100%;
+        -moz-box-sizing: border-box;
+    }
+
+}

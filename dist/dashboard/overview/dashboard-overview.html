@@ -1,0 +1,62 @@
+<!-- control bar -->
+<div class="control-bar col-xs-12" ng-init="selection = 'data'">
+    <ul class="control-bar-left">
+        <li><span class="control-icon grid-ico-graph"></span>File List</li>
+    </ul>
+    <ul class="control-bar-right">
+        <li><span class="control-icon grid-ico-print" ng-click="printer()" alt="Print page"></span></li>
+    </ul>
+</div>
+
+<!-- container for dashboard view -->
+<div class="grid-content col-xs-12">
+
+
+    <!-- graph panel -->
+    <div class="dashboard-graph" ng-show="selection === 'data'">
+        <!-- header -->
+        <h1>File List</h1>
+
+
+        <div class="form-group required-control">
+            <div class="col-md-12">
+                <div class="table-responsive gaEditTable">
+                    <table class="table table-bordered grid-table">
+                        <thead>
+                            <tr class="tableHeader">
+                                <th class="col-md-1">#</th>
+                                <th class="col-md-2">Date</th>
+                                <th class="col-md-5">Path</th>
+                                <th class="col-md-1">Version</th>
+                                <th class="col-md-3">Download</th>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td> </td>
+                                <td>
+                                    <search-text-field filtermodel="pathfilter"></search-text-field>
+                                </td>
+                                <td>                    
+                                </td>
+                                <td>
+                                </td>
+                                <tr>
+                        </thead>
+
+                        <tbody ng-init="pageSize = 10">
+                            <tr ng-repeat="file in fileList| fieldFilter:'path':pathfilter | startFrom:(currentPage - 1) * pageSize | limitTo:pageSize">
+                                <td>{{$index + (currentPage === undefined ? 0 : currentPage - 1) * pageSize + 1}}</td>
+                                <td>{{file.date | uploadDateFilter}}</td>
+                                <td>{{file.path | uploadFileNameFilter}}</td>
+                                <td>{{file.version}}</td>
+                                <td><a href="https://s3-ap-southeast-2.amazonaws.com/{{file.path}}"><span class="grid-ico-download"></span></td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <pagination total-items="(userList | filter:firstnamefilter).length" items-per-page="10" page="currentPage"></pagination>
+            </div>
+        </div>
+    </div>
+</div>

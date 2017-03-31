@@ -1,0 +1,13 @@
+<!-- partials/dashboard.html -->
+<div class="row row-offcanvas row-offcanvas-left">
+	<div class="col-xs-6 col-sm-2 sidebar-offcanvas no-padding" id="sidebar" role="navigation" >
+		<div class="sidebar-links affix">
+			<a ui-sref="main.dashboard.overview" ng-class="{active: (state.name.indexOf('main.dashboard.overview') === 0)}" class="tab"><span class="sidebar-tab-icon grid-ico-pie"></span>File List</a>
+			<a ui-sref="main.dashboard.upload" ng-class="{active: (state.name.indexOf('main.dashboard.upload') === 0)}" class="tab"><span class="sidebar-tab-icon grid-ico-upload"></span>File Upload</a>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-10 no-padding">
+		<div class="grid-holder row" ui-view>
+		</div>
+	</div>
+</div>
