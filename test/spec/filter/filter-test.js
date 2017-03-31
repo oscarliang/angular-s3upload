@@ -43,4 +43,11 @@ describe("Test fieldFilter Filter", function () {
     });
 
 
+    it('Should test the value of uploadDateFilter filter return', function () {
+        var actualResult;
+        var input = 1490965200;
+        actualResult = $filter('uploadDateFilter')(input);
+        expect(actualResult).toEqual("1/4/2017");
+    });
+
 })
