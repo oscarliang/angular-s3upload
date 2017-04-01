@@ -26,7 +26,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         controller: 'FileUploadController',
         activetab: 'dashboard'
     });
-   
+
     /* R&D - Mobile views */
     $stateProvider.state('mobile', {
         url: "/mobile",
@@ -47,11 +47,17 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         controller: 'OverviewController',
         activetab: 'dashboard'
     });
-        $stateProvider.state('login', {
+    $stateProvider.state('mobile.dashboard.upload', {
+        url: "/upload",
+        templateUrl: "dashboard/upload/file-upload.html",
+        controller: 'FileUploadController',
+        activetab: 'dashboard'
+    });
+    $stateProvider.state('login', {
         url: "/login",
         templateUrl: "other/login/login.html",
         controller: 'LoginController',
         activetab: 'login'
     });
-  
+
 });
